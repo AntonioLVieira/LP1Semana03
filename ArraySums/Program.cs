@@ -11,7 +11,11 @@ namespace ArraySums
             int count_line = 0;
             int count_column = 0;
             int dimension = int.Parse(Console.ReadLine());
+
+            // Cria matriz
             float [,] array = new float [dimension,dimension];
+
+            // Adiciona os números à matriz
             for (int i = 0; i < array.GetLength(0); i++)
             {
                 for (int j = 0; j < array.GetLength(1); j++)
@@ -21,6 +25,8 @@ namespace ArraySums
                     count++;
                 }
             }
+
+            // Soma os números de cada linha da matriz
             for (int i = 0; i < array.GetLength(0); i++)
             {
                 float line_sum = 0;
@@ -31,6 +37,8 @@ namespace ArraySums
                 count_line++;
                 Console.WriteLine("The sum of the line " +  count_line + " is: " + line_sum);
             }
+
+            // Soma os números de cada coluna da matriz
             for (int j = 0; j < array.GetLength(1); j++)
             {
                 float column_sum = 0;
